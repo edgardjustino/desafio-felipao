@@ -1,6 +1,6 @@
 let nivel = '';
 
-function hankingDeVitorias(vitorias, derrotas) {
+function rankingDeVitorias(vitorias, derrotas) {
   let saldoDeVitorias = vitorias - derrotas;
   
   if (vitorias <= 10) {
@@ -22,5 +22,5 @@ function hankingDeVitorias(vitorias, derrotas) {
   return "O Herói tem de saldo de "+ saldoDeVitorias +" está no nível de "+nivel+" **";
 }
 
-hankingDeVitorias();
-console.log(hankingDeVitorias(154,56))
+rankingDeVitorias();
+console.log(rankingDeVitorias(154,56))
