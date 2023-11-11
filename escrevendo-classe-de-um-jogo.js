@@ -35,14 +35,30 @@
 //   guerreiro atacou usando espada
 
 class heroiDaAventura {
-  constructor(nome, idade, tipo) {
+  constructor(nome, idade, tipo, ataque) {
     this.nome = nome;
     this.idade = idade;
     this.tipo = tipo;
     this.ataque = ataque;
   }
 
-  atacar(){
+  atacar() {
     return `o ${this.tipo} atacou usando ${this.ataque}`;
   }
 }
+
+let ataque = '';
+
+if (this.tipo === 'mago') {
+  ataque === 'magia';
+} else if (this.tipo === 'guerreiro') {
+  ataque === 'espada';
+} else if (this.tipo === 'monge') {
+  ataque === 'artes marciais';
+} else {
+  ataque === 'shuriken';
+}
+
+let heroi = new heroiDaAventura("Superman", 25, "mago");
+
+atacar();
