@@ -34,8 +34,12 @@
 //   ex: mago atacou usando magia
 //   guerreiro atacou usando espada
 
+//escrevendo-classe-de-um-jogo.js
+
+let ataque = '';
+
 class heroiDaAventura {
-  constructor(nome, idade, tipo, ataque) {
+  constructor(nome, idade, tipo) {
     this.nome = nome;
     this.idade = idade;
     this.tipo = tipo;
@@ -43,22 +47,19 @@ class heroiDaAventura {
   }
 
   atacar() {
-    return `o ${this.tipo} atacou usando ${this.ataque}`;
+    if (this.tipo === 'mago') {
+      ataque === 'magia';
+    } else if (this.tipo === 'guerreiro') {
+      ataque === 'espada';
+    } else if (this.tipo === 'monge') {
+      ataque === 'artes marciais';
+    } else {
+      ataque === 'shuriken';
+    }
+    console.log(`o ${this.tipo} atacou usando ${this.ataque}`);
   }
 }
 
-let ataque = '';
+let heroi = new heroiDaAventura('Superman', 25, 'mago');
 
-if (this.tipo === 'mago') {
-  ataque === 'magia';
-} else if (this.tipo === 'guerreiro') {
-  ataque === 'espada';
-} else if (this.tipo === 'monge') {
-  ataque === 'artes marciais';
-} else {
-  ataque === 'shuriken';
-}
-
-let heroi = new heroiDaAventura("Superman", 25, "mago");
-
-atacar();
+heroiDaAventura.atacar();
