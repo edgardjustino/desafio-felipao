@@ -29,37 +29,32 @@
 // ## Saída
 
 // Ao final deve se exibir uma mensagem:
-
 // - "o {tipo} atacou usando {ataque}"
-//   ex: mago atacou usando magia
-//   guerreiro atacou usando espada
 
 //escrevendo-classe-de-um-jogo.js
-
-let ataque = '';
 
 class heroiDaAventura {
   constructor(nome, idade, tipo) {
     this.nome = nome;
     this.idade = idade;
     this.tipo = tipo;
-    this.ataque = ataque;
   }
 
   atacar() {
+    let ataque = '';
     if (this.tipo === 'mago') {
-      ataque === 'magia';
+      ataque = 'magia';
     } else if (this.tipo === 'guerreiro') {
-      ataque === 'espada';
+      ataque = 'espada';
     } else if (this.tipo === 'monge') {
-      ataque === 'artes marciais';
+      ataque = 'artes marciais';
     } else {
-      ataque === 'shuriken';
+      ataque = 'shuriken';
     }
-    console.log(`o ${this.tipo} atacou usando ${this.ataque}`);
+    return `o ${this.tipo} atacou usando ${ataque}`;
   }
 }
 
 let heroi = new heroiDaAventura('Superman', 25, 'mago');
 
-heroiDaAventura.atacar();
+heroi.atacar();
